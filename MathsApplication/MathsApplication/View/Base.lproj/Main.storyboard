@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MathsApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVa-qR-TGP">
+                                <rect key="frame" x="20" y="144" width="100" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2uN-w7-6d9"/>
+                                    <constraint firstAttribute="width" constant="100" id="xDD-4G-9je"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Y" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ScR-2h-gog">
+                                <rect key="frame" x="294" y="144" width="100" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="LXp-95-nun">
+                                <rect key="frame" x="20" y="289" width="374" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxV-YG-PiD">
+                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                        <connections>
+                                            <action selector="plusAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zYG-no-fIT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bc-1e-sBs">
+                                        <rect key="frame" x="95.5" y="0.0" width="88" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                        <connections>
+                                            <action selector="subAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gwA-O2-Jhv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qh-h8-AmM">
+                                        <rect key="frame" x="190.5" y="0.0" width="88.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="x"/>
+                                        <connections>
+                                            <action selector="multiplicationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sSB-pE-8ot"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMY-Wl-06E">
+                                        <rect key="frame" x="286" y="0.0" width="88" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="/"/>
+                                        <connections>
+                                            <action selector="divisionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D5A-Qp-6tV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Kdd-Wc-ZHD"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JP-Ha-gy1">
+                                <rect key="frame" x="20" y="434" width="374" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LXp-95-nun" firstAttribute="leading" secondItem="VVa-qR-TGP" secondAttribute="leading" id="3oh-Oz-opq"/>
+                            <constraint firstItem="3JP-Ha-gy1" firstAttribute="top" secondItem="LXp-95-nun" secondAttribute="bottom" constant="100" id="5P0-32-zCY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ScR-2h-gog" secondAttribute="trailing" constant="20" id="EM2-dg-zvH"/>
+                            <constraint firstItem="ScR-2h-gog" firstAttribute="width" secondItem="VVa-qR-TGP" secondAttribute="width" id="HVz-mC-a5Z"/>
+                            <constraint firstItem="LXp-95-nun" firstAttribute="trailing" secondItem="ScR-2h-gog" secondAttribute="trailing" id="KjM-cF-634"/>
+                            <constraint firstItem="ScR-2h-gog" firstAttribute="height" secondItem="VVa-qR-TGP" secondAttribute="height" id="Pcg-vO-NaU"/>
+                            <constraint firstItem="3JP-Ha-gy1" firstAttribute="leading" secondItem="LXp-95-nun" secondAttribute="leading" id="bOA-XP-jB1"/>
+                            <constraint firstItem="ScR-2h-gog" firstAttribute="centerY" secondItem="VVa-qR-TGP" secondAttribute="centerY" id="igv-CA-OUL"/>
+                            <constraint firstItem="VVa-qR-TGP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="j2Y-nz-srd"/>
+                            <constraint firstItem="VVa-qR-TGP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nr9-IW-MW2"/>
+                            <constraint firstItem="3JP-Ha-gy1" firstAttribute="trailing" secondItem="LXp-95-nun" secondAttribute="trailing" id="vM3-C3-CpD"/>
+                            <constraint firstItem="LXp-95-nun" firstAttribute="top" secondItem="VVa-qR-TGP" secondAttribute="bottom" constant="100" id="zYM-Px-38t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelValue" destination="3JP-Ha-gy1" id="R0j-YD-nif"/>
+                        <outlet property="textFieldValueFirst" destination="VVa-qR-TGP" id="b1E-Dp-sFr"/>
+                        <outlet property="textFieldValueSecond" destination="ScR-2h-gog" id="eRu-eu-0GG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
